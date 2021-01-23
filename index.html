@@ -143,6 +143,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
+
     moment().format();
   console.log(moment());
     var time = moment();
@@ -226,8 +227,11 @@
   
   $("#btn1").click(function(){   
     var input = $("#txt1").val();
-    console.log(input) 
-    $("#txt1").text(input)
+    
+    localStorage.setItem("userinput", input);
+   
+    console.log(localStorage.getItem("userinput"));
+    $("#txt1").text(localStorage.getItem("userinput"));
   });
 
   $("#btn2").click(function(){   
